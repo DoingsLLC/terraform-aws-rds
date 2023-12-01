@@ -207,7 +207,7 @@ parameter_group_use_name_prefix = true
 parameter_group_description = null
 
 
-family = null
+family = "mysql-8.0"
 
 
 parameters = []
