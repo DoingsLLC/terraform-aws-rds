@@ -1,7 +1,7 @@
 identifier = "doingsdb"
 
 
-instance_use_identifier_prefix = true
+instance_use_identifier_prefix = false
 
 
 custom_iam_instance_profile = null
@@ -40,10 +40,10 @@ domain = null
 domain_iam_role_name = null
 
 
-engine = "MySQL Community"
+engine = null
 
 
-engine_version = "MySQL 8.0.33"
+engine_version = null
 
 
 skip_final_snapshot = true
