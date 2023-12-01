@@ -1,7 +1,7 @@
 identifier = "doingsdb"
 
 
-instance_use_identifier_prefix = false
+instance_use_identifier_prefix = true
 
 
 custom_iam_instance_profile = null
@@ -195,7 +195,7 @@ subnet_ids =  []
 
 # DB parameter group
 
-create_db_parameter_group = true
+create_db_parameter_group = false
 
 
 parameter_group_name = null
@@ -215,7 +215,7 @@ parameters = []
 
 # DB option group
 
-create_db_option_group = true
+create_db_option_group = false
 
 
 option_group_name = null
