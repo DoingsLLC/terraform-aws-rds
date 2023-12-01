@@ -147,32 +147,32 @@ s3_import = null
 
 
 tags = {
-    environment_name = "production"
-    name   = "doingsdb-env"
+    #environment_name = "production"
+    #name   = "doingsdb-env"
 }
 
 
 db_instance_tags = {
-    environment_name = "production"
-    name   = "doingsdb-instance"
+    #environment_name = "production"
+    #name   = "doingsdb-instance"
 }
 
 
 db_option_group_tags = {
-    environment_name = "production"
-    name   = "doingsdb-option"
+    #environment_name = "production"
+    #name   = "doingsdb-option"
 }
 
 
 db_parameter_group_tags = {
-    environment_name = "production"
-    name   = "doingsdb-parameter"
+    #environment_name = "production"
+    #name   = "doingsdb-parameter"
 }
 
 
 db_subnet_group_tags = {
-    environment_name = "production"
-    name   = "doingsdb-subnet"
+    #environment_name = "production"
+    #name   = "doingsdb-subnet"
 }
 
 
@@ -207,7 +207,7 @@ parameter_group_use_name_prefix = true
 parameter_group_description = null
 
 
-family = "doingsdb-family"
+family = null
 
 
 parameters = []
@@ -227,7 +227,7 @@ option_group_use_name_prefix = true
 option_group_description = null
 
 
-major_engine_version = "MySQL-8-0"
+major_engine_version = null
 
 
 options = []
