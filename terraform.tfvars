@@ -184,7 +184,7 @@ create_db_subnet_group = true
 db_subnet_group_name =  null
 
 
-db_subnet_group_use_name_prefix = true
+db_subnet_group_use_name_prefix = false
 
 
 db_subnet_group_description = null
