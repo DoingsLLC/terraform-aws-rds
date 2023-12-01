@@ -178,13 +178,13 @@ db_subnet_group_tags = {
 
 #DB subnet group
 
-create_db_subnet_group = true
+create_db_subnet_group = false
 
 
 db_subnet_group_name =  null
 
 
-db_subnet_group_use_name_prefix = false
+db_subnet_group_use_name_prefix = true
 
 
 db_subnet_group_description = null
