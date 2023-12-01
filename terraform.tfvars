@@ -227,7 +227,7 @@ option_group_use_name_prefix = true
 option_group_description = null
 
 
-major_engine_version = null
+major_engine_version = "MySQL 8.0"
 
 
 options = []
