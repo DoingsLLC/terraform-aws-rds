@@ -91,7 +91,7 @@ multi_az = false
 iops = null
 
 
-publicly_accessible = true
+publicly_accessible = false
 
 
 monitoring_interval = 0
