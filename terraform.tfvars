@@ -40,10 +40,10 @@ domain = null
 domain_iam_role_name = null
 
 
-engine = null
+engine = "MySQL Community"
 
 
-engine_version = null
+engine_version = "MySQL 8.0.33"
 
 
 skip_final_snapshot = true
@@ -207,7 +207,7 @@ parameter_group_use_name_prefix = true
 parameter_group_description = null
 
 
-family = null
+family = "doingsdb-family"
 
 
 parameters = []
