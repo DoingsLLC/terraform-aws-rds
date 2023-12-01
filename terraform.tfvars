@@ -190,7 +190,7 @@ db_subnet_group_use_name_prefix = true
 db_subnet_group_description = null
 
 
-subnet_ids = "var.create_db_subnet_group ? [] : null"
+subnet_ids = null
 
 
 # DB parameter group
@@ -227,7 +227,7 @@ option_group_use_name_prefix = true
 option_group_description = null
 
 
-major_engine_version = null
+major_engine_version = "MySQL-8-0"
 
 
 options = []
