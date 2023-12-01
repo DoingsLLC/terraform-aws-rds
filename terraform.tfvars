@@ -1,4 +1,4 @@
-identifier = string
+identifier = doingsdb
 
 
 instance_use_identifier_prefix = false
@@ -7,10 +7,10 @@ instance_use_identifier_prefix = false
 custom_iam_instance_profile = null
 
 
-allocated_storage = null
+allocated_storage = 20
 
 
-storage_type = null
+storage_type = gp3
 
 
 storage_throughput = null
@@ -46,7 +46,7 @@ engine = null
 engine_version = null
 
 
-skip_final_snapshot = false
+skip_final_snapshot = true
 
 
 snapshot_identifier = null
@@ -58,13 +58,13 @@ copy_tags_to_snapshot = false
 final_snapshot_identifier_prefix = "final"
 
 
-instance_class = null
+instance_class = db.t2.micro
 
 
-db_name = null
+db_name = doingsdb
 
 
-username = null
+username = admin
 
 
 password = null
@@ -73,16 +73,16 @@ password = null
 manage_master_user_password = true
 
 
-master_user_secret_kms_key_id = null
+master_user_secret_kms_key_id = doingsdb-password
 
 
-port = null
+port = 3306
 
 
 vpc_security_group_ids = []
 
 
-availability_zone = null
+availability_zone = us-east-1e
 
 
 multi_az = false
@@ -91,7 +91,7 @@ multi_az = false
 iops = null
 
 
-publicly_accessible = false
+publicly_accessible = true
 
 
 monitoring_interval = 0
@@ -118,7 +118,7 @@ monitoring_role_permissions_boundary = null
 allow_major_version_upgrade = false
 
 
-auto_minor_version_upgrade = true
+auto_minor_version_upgrade = false
 
 
 apply_immediately = false
@@ -127,10 +127,14 @@ apply_immediately = false
 maintenance_window = null
 
 
-blue_green_update = {}
+blue_green_update = {
+    environment_name = "production"
+    traffic_switch   = "manual"
+    rollback_policy  = "failure"
+}
 
 
-backup_retention_period = null
+backup_retention_period = 7
 
 
 backup_window = null
@@ -142,27 +146,42 @@ restore_to_point_in_time = null
 s3_import = null
 
 
-tags = {}
+tags = {
+    environment_name = "production"
+    name   = "doingsdb-env"
+}
 
 
-db_instance_tags = {}
+db_instance_tags = {
+    environment_name = "production"
+    name   = "doingsdb-instance"
+}
 
 
-db_option_group_tags = {}
+db_option_group_tags = {
+    environment_name = "production"
+    name   = "doingsdb-option"
+}
 
 
-db_parameter_group_tags = {}
+db_parameter_group_tags = {
+    environment_name = "production"
+    name   = "doingsdb-parameter"
+}
 
 
-db_subnet_group_tags = {}
+db_subnet_group_tags = {
+    environment_name = "production"
+    name   = "doingsdb-subnet"
+}
 
 
 #DB subnet group
 
-create_db_subnet_group = false
+create_db_subnet_group = true
 
 
-db_subnet_group_name = null
+db_subnet_group_name = doingsdb-subnet
 
 
 db_subnet_group_use_name_prefix = true
@@ -171,7 +190,7 @@ db_subnet_group_use_name_prefix = true
 db_subnet_group_description = null
 
 
-subnet_ids = []
+subnet_ids = var.create_db_subnet_group ? [] : null
 
 
 # DB parameter group
@@ -179,7 +198,7 @@ subnet_ids = []
 create_db_parameter_group = true
 
 
-parameter_group_name = null
+parameter_group_name = doingsdb-parameter
 
 
 parameter_group_use_name_prefix = true
@@ -199,7 +218,7 @@ parameters = []
 create_db_option_group = true
 
 
-option_group_name = null
+option_group_name = doingsdb-options
 
 
 option_group_use_name_prefix = true
