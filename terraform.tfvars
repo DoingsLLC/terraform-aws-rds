@@ -181,7 +181,7 @@ db_subnet_group_tags = {
 create_db_subnet_group = true
 
 
-db_subnet_group_name = "doingsdb-subnet"
+db_subnet_group_name =  "doingsdb-subnet"
 
 
 db_subnet_group_use_name_prefix = true
@@ -190,7 +190,7 @@ db_subnet_group_use_name_prefix = true
 db_subnet_group_description = null
 
 
-subnet_ids = null
+subnet_ids =  []
 
 
 # DB parameter group
