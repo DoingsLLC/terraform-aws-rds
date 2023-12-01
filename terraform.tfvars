@@ -190,7 +190,7 @@ db_subnet_group_use_name_prefix = true
 db_subnet_group_description = null
 
 
-subnet_ids = var.create_db_subnet_group ? [] : null
+subnet_ids = "var.create_db_subnet_group ? [] : null"
 
 
 # DB parameter group
