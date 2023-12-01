@@ -1,4 +1,4 @@
-identifier = doingsdb
+identifier = "doingsdb"
 
 
 instance_use_identifier_prefix = false
@@ -10,7 +10,7 @@ custom_iam_instance_profile = null
 allocated_storage = 20
 
 
-storage_type = gp3
+storage_type = "gp3"
 
 
 storage_throughput = null
@@ -58,13 +58,13 @@ copy_tags_to_snapshot = false
 final_snapshot_identifier_prefix = "final"
 
 
-instance_class = db.t2.micro
+instance_class = "db.t2.micro"
 
 
-db_name = doingsdb
+db_name = "doingsdb"
 
 
-username = admin
+username = "admin"
 
 
 password = null
@@ -73,7 +73,7 @@ password = null
 manage_master_user_password = true
 
 
-master_user_secret_kms_key_id = doingsdb-password
+master_user_secret_kms_key_id = "doingsdb-password"
 
 
 port = 3306
@@ -82,7 +82,7 @@ port = 3306
 vpc_security_group_ids = []
 
 
-availability_zone = us-east-1e
+availability_zone = "us-east-1e"
 
 
 multi_az = false
@@ -181,7 +181,7 @@ db_subnet_group_tags = {
 create_db_subnet_group = true
 
 
-db_subnet_group_name = doingsdb-subnet
+db_subnet_group_name = "doingsdb-subnet"
 
 
 db_subnet_group_use_name_prefix = true
@@ -198,7 +198,7 @@ subnet_ids = var.create_db_subnet_group ? [] : null
 create_db_parameter_group = true
 
 
-parameter_group_name = doingsdb-parameter
+parameter_group_name = "doingsdb-parameter"
 
 
 parameter_group_use_name_prefix = true
@@ -218,7 +218,7 @@ parameters = []
 create_db_option_group = true
 
 
-option_group_name = doingsdb-options
+option_group_name = "doingsdb-options"
 
 
 option_group_use_name_prefix = true
